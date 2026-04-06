@@ -212,13 +212,6 @@ Built-in newline-delimited JSON reporter.
 
 ## License
 
-MIT
-```
-
----
-
-### Step 4 — Add `LICENSE` file
-```
 MIT License
 
 Copyright (c) 2025 nodeye contributors
