@@ -1,5 +1,5 @@
 {
-  "name": "nodeye",
+  "name": "@shaikh-owais/nodeye",
   "version": "0.1.0",
   "description": "Zero-config Node.js performance monitor",
   "license": "MIT",
