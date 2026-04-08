@@ -3,7 +3,7 @@
 > Zero-config Node.js performance monitor. One line of code. See every slow query, HTTP call, and Redis command instantly.
 
 [![npm version](https://img.shields.io/npm/v/nodeye-js.svg)](https://www.npmjs.com/package/nodeye-js)
-[![license](https://img.shields.io/npm/l/nodeye-js.svg)](./LICENSE)
+[![license](https://img.shields.io/npm/l/nodeye-js.svg)](https://github.com/Sk-Owais/nodeye/blob/main/LICENSE)
 
 ## The problem
 
