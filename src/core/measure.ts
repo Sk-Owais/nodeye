@@ -9,7 +9,6 @@ export function startTimer(
 ): () => void {
   if (!cfg.enabled) return noop;
   if (cfg.sampleRate < 1 && Math.random() > cfg.sampleRate) return noop;
-
   if (
     category !== "custom" &&
     !cfg.monitors[category as keyof typeof cfg.monitors]
@@ -18,8 +17,15 @@ export function startTimer(
 
   const start = performance.now();
   const timestamp = Date.now();
-  const stack = cfg.captureStack
-    ? new Error().stack?.split("\n").slice(3).join("\n")
+
+  const rawStack = cfg.captureStack ? new Error().stack : undefined;
+  const stack = rawStack
+    ? rawStack
+        .split("\n")
+        .filter(
+          (line) => !line.includes("nodeye-js") && !line.includes("dist/index"),
+        )
+        .join("\n")
     : undefined;
 
   return function done() {

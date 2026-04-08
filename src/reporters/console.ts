@@ -21,5 +21,7 @@ export function consoleReporter(event: PerfEvent): void {
 
   console.log(`${badge}${slow} ${event.label} — ${ms} @ ${time}`);
   if (event.meta) console.log(`  meta: ${JSON.stringify(event.meta)}`);
-  if (event.stack) console.log(`  ${event.stack}`);
+  if (event.stack) {
+    console.log(`  Stack:\n${event.stack}`);
+  }
 }
