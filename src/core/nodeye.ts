@@ -22,14 +22,14 @@ export function init(userConfig: NodeyeConfig = {}): NodeyeInstance {
   const config = resolveConfig(userConfig);
 
   if (!config.enabled) {
-    _instance = { config, destroy() { } };
+    _instance = { config, destroy() {} };
     return _instance;
   }
 
   const unwireReporters = wireReporters(config);
 
   const monitorCleanups = [
-    patchAxios(config),      // pass nothing — CJS auto-detect
+    patchAxios(config),
     patchMongoose(config),
     patchIoRedis(config),
   ];

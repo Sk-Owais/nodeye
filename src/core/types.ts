@@ -42,7 +42,7 @@ export interface NodeyeConfig {
     redis?: boolean;
     http?: boolean;
     queue?: boolean;
-    custom?: boolean;   // ← add this
+    custom?: boolean;
   };
   reporters?: ReporterFn | ReporterFn[];
 }
@@ -54,6 +54,6 @@ export interface ResolvedConfig {
   captureArgs: boolean;
   captureStack: boolean;
   sampleRate: number;
-  monitors: Required<Required<NodeyeConfig>["monitors"]>;  // now includes custom
+  monitors: Required<Required<NodeyeConfig>["monitors"]>;
   reporters: ReporterFn[];
 }

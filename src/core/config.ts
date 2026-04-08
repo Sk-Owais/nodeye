@@ -5,7 +5,9 @@ const DEFAULT_MS = 100;
 
 export function resolveConfig(user: NodeyeConfig = {}): ResolvedConfig {
   const reporters = user.reporters
-    ? Array.isArray(user.reporters) ? user.reporters : [user.reporters]
+    ? Array.isArray(user.reporters)
+      ? user.reporters
+      : [user.reporters]
     : [consoleReporter];
 
   return {
@@ -28,7 +30,7 @@ export function resolveConfig(user: NodeyeConfig = {}): ResolvedConfig {
       redis: user.monitors?.redis ?? true,
       http: user.monitors?.http ?? true,
       queue: user.monitors?.queue ?? true,
-      custom: user.monitors?.custom ?? true,  // ← add this
+      custom: user.monitors?.custom ?? true,
     },
     reporters,
   };

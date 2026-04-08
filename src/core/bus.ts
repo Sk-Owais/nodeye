@@ -1,7 +1,7 @@
 import type { PerfEvent, ResolvedConfig } from "./types.js";
 
 type Subscriber = (event: PerfEvent) => void;
-let subscribers: Subscriber[] = [];  // `let` not `const` so we can reset
+let subscribers: Subscriber[] = [];
 
 export function subscribe(fn: Subscriber): () => void {
   subscribers.push(fn);
@@ -13,7 +13,9 @@ export function subscribe(fn: Subscriber): () => void {
 
 export function emit(event: PerfEvent): void {
   for (let i = 0; i < subscribers.length; i++) {
-    try { subscribers[i]!(event); } catch { /* reporters must never crash host */ }
+    try {
+      subscribers[i]!(event);
+    } catch {}
   }
 }
 
