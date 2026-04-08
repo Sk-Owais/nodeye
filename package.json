@@ -1,6 +1,6 @@
 {
-  "name": "@shaikh-owais/nodeye",
-  "version": "0.1.0",
+  "name": "nodeye-js",
+  "version": "0.1.1",
   "description": "Zero-config Node.js performance monitor",
   "license": "MIT",
   "type": "module",
@@ -63,5 +63,22 @@
     "pg": {
       "optional": true
     }
-  }
+  },
+  "keywords": [
+    "nodejs",
+    "performance",
+    "monitoring",
+    "profiling",
+    "apm",
+    "slow-query",
+    "mongoose",
+    "axios",
+    "ioredis",
+    "redis",
+    "mongodb",
+    "zero-config",
+    "observability",
+    "debugger",
+    "tracing"
+  ]
 }

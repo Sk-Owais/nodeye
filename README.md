@@ -2,8 +2,8 @@
 
 > Zero-config Node.js performance monitor. One line of code. See every slow query, HTTP call, and Redis command instantly.
 
-[![npm version](https://img.shields.io/npm/v/nodeye.svg)](https://www.npmjs.com/package/nodeye)
-[![license](https://img.shields.io/npm/l/nodeye.svg)](./LICENSE)
+[![npm version](https://img.shields.io/npm/v/nodeye-js.svg)](https://www.npmjs.com/package/nodeye-js)
+[![license](https://img.shields.io/npm/l/nodeye-js.svg)](./LICENSE)
 
 ## The problem
 
@@ -11,7 +11,7 @@ You have a slow API endpoint. Is it MongoDB? Redis? An axios call to a third-par
 
 ## The solution
 ```ts
-import { init } from 'nodeye';
+import { init } from 'nodeye-js';
 init();
 ```
 
@@ -21,11 +21,11 @@ That's it. nodeye auto-patches mongoose, axios, and ioredis. Every slow operatio
 
 ## Install
 ```bash
-npm install nodeye
+npm install nodeye-js
 # or
-pnpm add nodeye
+pnpm add nodeye-js
 # or
-yarn add nodeye
+yarn add nodeye-js
 ```
 
 ---
@@ -35,7 +35,7 @@ yarn add nodeye
 ### TypeScript / ESM
 ```ts
 // At the very top of your entry file (index.ts, server.ts, app.ts)
-import { init } from 'nodeye';
+import { init } from 'nodeye'-js;
 
 init();
 
@@ -48,7 +48,7 @@ import axios from 'axios';
 ### JavaScript / CJS
 ```js
 // At the very top of your entry file
-const { init } = require('nodeye');
+const { init } = require('nodeye-js');
 
 init();
 
@@ -115,7 +115,7 @@ init({
 
 For any function not auto-patched:
 ```ts
-import { wrap } from 'nodeye';
+import { wrap } from 'nodeye-js';
 
 const users = await wrap('fetchUsersFromLegacyAPI', () =>
   legacyClient.getUsers()
@@ -133,7 +133,7 @@ Output:
 
 ### JSON (for log pipelines like Datadog, Loki, CloudWatch)
 ```ts
-import { init, jsonReporter } from 'nodeye';
+import { init, jsonReporter } from 'nodeye-js';
 
 init({ reporters: jsonReporter });
 ```
@@ -209,8 +209,6 @@ Built-in colored console reporter (default).
 Built-in newline-delimited JSON reporter.
 
 ---
-
-## License
 
 ## License
 
