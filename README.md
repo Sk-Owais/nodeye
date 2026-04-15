@@ -35,7 +35,7 @@ yarn add nodeye-js
 ### TypeScript / ESM
 ```ts
 // At the very top of your entry file (index.ts, server.ts, app.ts)
-import { init } from 'nodeye'-js;
+import { init } from 'nodeye-js';
 
 init();
 
