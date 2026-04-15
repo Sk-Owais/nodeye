@@ -1,6 +1,6 @@
 {
   "name": "nodeye-js",
-  "version": "0.1.8",
+  "version": "0.1.9",
   "description": "Zero-config Node.js performance monitor",
   "license": "MIT",
   "type": "module",
