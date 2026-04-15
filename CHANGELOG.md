@@ -6,8 +6,13 @@ Format follows [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 ---
 
 ## [Unreleased]
+
+---
+
+## [0.1.9] - 2026-04-15
 ### Fixed
-- Ongoing bug fixes and performance improvements
+- Fix issue with async tracking
+- Improve patch stability
 
 ---
 
